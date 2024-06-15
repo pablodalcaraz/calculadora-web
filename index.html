@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>Calculadora</h1>
+        </div>
+        <div class="calculadora" id="calculadora" >
+            <div class="pantalla">
+            <input type="text" id="pantalla" style="width: 220px;">
+            
+            <div class="cont-calculadora" keydown>
+            <br>
+            <button class="radio" id="radio" onclick="prender()"><i class="fa fa-power-off" aria-hidden="true"></i></i></button>
+            <input type="button" value="C" onclick="borrar('C')">
+            <input type="button" value="%" onclick="calcularPorcentaje()">
+            <input type="button" value="/" onclick="agregar('/')">
+            <br>
+            <input type="button" value="7" onclick="agregar('7')">
+            <input type="button" value="8" onclick="agregar('8')">
+            <input type="button" value="9" onclick="agregar('9')">
+            <input type="button" value="*" onclick="agregar('*')">
+            <br>
+            <input type="button" value="4" onclick="agregar('4')">
+            <input type="button" value="5" onclick="agregar('5')">
+            <input type="button" value="6" onclick="agregar('6')">
+            <input type="button" value="-" onclick="agregar('-')">
+            <br>
+            <input type="button" value="1" onclick="agregar('1')">
+            <input type="button" value="2" onclick="agregar('2')">
+            <input type="button" value="3" onclick="agregar('3')">
+            <input type="button" value="+" onclick="agregar('+')"> 
+            <br>
+            <button class="atras" id="atras" onclick="borrarUltimo()"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+            <input type="button" value="0" onclick="agregar('0')">
+            <input type="button" value="." onclick="agregar('.')">
+            <input type="button" value="=" onclick="calcular('=')">
+
+        </div>   
+        </div>
+    </div>
+</div>
+    <script src="/script.js"></script>
+</body>
+</html>
