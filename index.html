@@ -8,15 +8,19 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="contenedor">
+    <div class="contenedor" id="contenedor">
         <div class="titulo">
-            <h1>Calculadora</h1>
+            <h1>Calculadora Web</h1>
+            <h2 class="switch" id="switch">
+                <i class="fa fa-sun-o" aria-hidden="true"></i>
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
+            </h2>
         </div>
         <div class="calculadora" id="calculadora" >
-            <div class="pantalla">
-            <input type="text" id="pantalla" style="width: 220px;">
+            <div>
+            <input type="text" class="pantalla" id="pantalla" style="width: 220px;">
             
-            <div class="cont-calculadora" keydown>
+            <div class="cont-calculadora" id="cont-calculadora" keydown>
             <br>
             <button class="radio" id="radio" onclick="prender()"><i class="fa fa-power-off" aria-hidden="true"></i></i></button>
             <input type="button" value="C" onclick="borrar('C')">
@@ -47,6 +51,9 @@
         </div>
     </div>
 </div>
+<div class="copyright" id="copyrigth">
+    <p>&#xA9 copyright - 2024 - reservados los derechos - creado por @pablodalcaraz </p>
+  </div>
     <script src="/script.js"></script>
 </body>
 </html>

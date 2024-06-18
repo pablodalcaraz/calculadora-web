@@ -6,7 +6,7 @@ function agregar(valor){
       pantalla.value += valor;
       guardado.push(valor);
    }else{
-      let mensaje='Calculadora apagada!  ';
+      let mensaje='Calculadora apagada!   ';
       pantalla.value = mensaje;
    }
   
@@ -107,3 +107,18 @@ function calcularPorcentaje() {
        }
    
 }
+const selector = document.getElementById('switch');
+const contenedor=document.getElementById('contenedor');
+const calculadora=document.getElementById('calculadora');
+const botones = document.getElementById('cont-calculadora');
+const copyrigth=document.getElementById('copyrigth');
+selector.addEventListener('click', (ev) =>{
+   selector.classList.toggle('active');
+   contenedor.classList.toggle('active');
+   calculadora.classList.toggle('active');
+   botones.classList.toggle('active');
+   document.body.classList.toggle('active');
+   pantalla.classList.toggle('active');
+   copyrigth.classList.toggle('active');
+})
+
