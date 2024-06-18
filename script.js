@@ -6,16 +6,46 @@ function agregar(valor){
       pantalla.value += valor;
       guardado.push(valor);
    }else{
-      let mensaje='Calculadora apagada!';
+      let mensaje='Calculadora apagada!  ';
       pantalla.value = mensaje;
    }
   
 }
 
-function calcular(){
-   let valorPantalla = pantalla.value;
-   let resultado= eval(valorPantalla);
-   pantalla.value = resultado;
+function calcular() {
+   try {
+       let resultado = evaluarEnOrden(pantalla.value);
+       pantalla.value = resultado;
+   } catch (e) {
+       pantalla.value = 'Error';
+   }
+}
+
+function evaluarEnOrden(expresion) {
+   let tokens = expresion.match(/(\d+|\D)/g);
+   let resultado = parseFloat(tokens[0]);
+   
+   for (let i = 1; i < tokens.length; i += 2) {
+       let operador = tokens[i];
+       let siguienteNumero = parseFloat(tokens[i + 1]);
+       
+       switch (operador) {
+           case '+':
+               resultado += siguienteNumero;
+               break;
+           case '-':
+               resultado -= siguienteNumero;
+               break;
+           case '*':
+               resultado *= siguienteNumero;
+               break;
+           case '/':
+               resultado /= siguienteNumero;
+               break;
+       }
+   }
+   
+   return resultado;
 }
 
 function borrar(){
